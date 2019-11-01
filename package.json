@@ -1,0 +1,20 @@
+{
+  "name": "magikeys",
+  "version": "1.0.0",
+  "description": "Simple JS class that allows you to trigger an action after typing a keys sequence on your keyboard.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/betaWeb/magikeys.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/betaWeb/magikeys/issues"
+  },
+  "homepage": "https://github.com/betaWeb/magikeys#readme"
+}
