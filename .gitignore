@@ -1,3 +1,10 @@
+# Folders
 .cache/
 .idea/
+dist/
+node_modules/
+
+# Files
 index.html
+*.log
+_old_Magikeys.js

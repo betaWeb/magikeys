@@ -2,9 +2,10 @@
   "name": "magikeys",
   "version": "1.0.0",
   "description": "Simple JS class that allows you to trigger an action after typing a keys sequence on your keyboard.",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "rm ./dist -rf && parcel serve index.html --target browser --out-dir build",
+    "build": "rm ./build -rf && parcel build src/Magikeys.ts --target browser --out-dir build",
+    "ts-check": "tsc --noEmit -p tsconfig.json"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,16 @@
   "bugs": {
     "url": "https://github.com/betaWeb/magikeys/issues"
   },
-  "homepage": "https://github.com/betaWeb/magikeys#readme"
+  "homepage": "https://github.com/betaWeb/magikeys#readme",
+  "devDependencies": {
+    "typescript": "^3.6.4"
+  },
+  "dependencies": {
+    "src": "^1.1.2"
+  },
+  "browserslist": [
+    "last 10 version",
+    "> 1%",
+    "IE >= 11"
+  ]
 }

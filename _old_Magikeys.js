@@ -1,4 +1,4 @@
-class Magikeys {
+class _old_Magikeys {
 
     /**
      * @returns {{
@@ -35,7 +35,7 @@ class Magikeys {
         expected.constructor === String && (expected = expected.split(''))
         this.expected = expected
         this.callback = cb
-        this.options = {...Magikeys._DEFAULT_OPTIONS, ...options}
+        this.options = {..._old_Magikeys._DEFAULT_OPTIONS, ...options}
         this._listened = false
 
         this._init()
@@ -51,16 +51,16 @@ class Magikeys {
      * @param {String[]} options.exclude
      * @param {Document|Element|String} options.context
      * @param {Number} options.timeout
-     * @return {Magikeys}
+     * @return {_old_Magikeys}
      */
     static create(expected, cb, options = {}) {
-        return new Magikeys(expected, cb, options)
+        return new _old_Magikeys(expected, cb, options)
     }
 
     /**
      * Add sequence event listener on context
      *
-     * @return {Magikeys}
+     * @return {_old_Magikeys}
      */
     run() {
         try {
@@ -86,7 +86,7 @@ class Magikeys {
     /**
      * Destroy sequence event listener on context
      *
-     * @return {Magikeys}
+     * @return {_old_Magikeys}
      */
     destroy() {
         try {
@@ -103,7 +103,7 @@ class Magikeys {
     /**
      * Listen sequence
      *
-     * @return {Magikeys}
+     * @return {_old_Magikeys}
      */
     listen() {
         this._listened = true
@@ -113,7 +113,7 @@ class Magikeys {
     /**
      * Mute and prevent  sequence
      *
-     * @return {Magikeys}
+     * @return {_old_Magikeys}
      */
     mute() {
         this._listened = false
@@ -198,4 +198,4 @@ class Magikeys {
 
 }
 
-window.Magikeys = Magikeys
+window.Magikeys = _old_Magikeys
