@@ -59,7 +59,7 @@ class Magikeys {
         this._listened = false
 
         this._init()
-        this.run().listen()
+        return this.run().listen()
     }
 
     /**
@@ -183,7 +183,7 @@ class Magikeys {
     _getContext(): Element|Document {
         const _ctx = this.options.context
         if (_ctx.constructor === String)
-            return this._getContext().querySelector(_ctx as string) || document
+            return document.querySelector(_ctx as string) || document
 
         const nodeType = (<Element|Document>_ctx).nodeType as number
         if (nodeType && nodeType === Node.ELEMENT_NODE)

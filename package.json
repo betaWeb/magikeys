@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "rm ./dist -rf && parcel serve index.html --target browser --out-dir build",
     "build": "rm ./build -rf && parcel build src/Magikeys.ts --target browser --out-dir build",
-    "ts-check": "tsc --noEmit -p tsconfig.json"
+    "ts-check": "tsc --noEmit -p tsconfig.json",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,10 @@
   },
   "homepage": "https://github.com/betaWeb/magikeys#readme",
   "devDependencies": {
+    "jest": "^24.9.0",
+    "jest-cli": "^24.9.0",
+    "jest-puppeteer": "^4.3.0",
+    "puppeteer": "^2.0.0",
     "typescript": "^3.6.4"
   },
   "dependencies": {
@@ -28,5 +33,18 @@
     "last 10 version",
     "> 1%",
     "IE >= 11"
-  ]
+  ],
+  "directories": {
+    "test": "tests"
+  },
+  "jest": {
+    "preset": "jest-puppeteer",
+    "globals": {
+      "PATH": "http://localhost:1234"
+    },
+    "testMatch": [
+      "**/tests/?(*.)(spec|test).js?(x)"
+    ],
+    "setupFilesAfterEnv": ["expect-puppeteer"]
+  }
 }
