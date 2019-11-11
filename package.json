@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Simple JS class that allows you to trigger an action after typing a keys sequence on your keyboard.",
   "scripts": {
-    "serve": "rm ./dist -rf && parcel serve index.html --target browser --out-dir build",
+    "serve": "rm ./dist -rf && parcel serve index.html --target browser --out-dir dist",
     "build": "rm ./build -rf && parcel build src/Magikeys.ts --target browser --out-dir build",
     "ts-check": "tsc --noEmit -p tsconfig.json",
     "test": "jest"
@@ -27,6 +27,7 @@
     "typescript": "^3.6.4"
   },
   "dependencies": {
+    "pm2": "^4.1.2",
     "src": "^1.1.2"
   },
   "browserslist": [
@@ -45,6 +46,8 @@
     "testMatch": [
       "**/tests/?(*.)(spec|test).js?(x)"
     ],
-    "setupFilesAfterEnv": ["expect-puppeteer"]
+    "setupFilesAfterEnv": [
+      "expect-puppeteer"
+    ]
   }
 }
